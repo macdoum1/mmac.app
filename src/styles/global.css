@@ -75,9 +75,6 @@ a:focus-visible { outline: 3px solid var(--color-blue-light); outline-offset: 5p
 .hero { min-height: 520px; padding: 56px 2px 14px; display: grid; grid-template-columns: 1fr .93fr; grid-template-rows: 1fr auto; align-items: center; position: relative; overflow: hidden; }
 .hero-copy { position: relative; z-index: 2; padding-bottom: 36px; }
 .eyebrow { margin: 0; color: var(--color-ink-faint); font-size: 10px; font-weight: 650; letter-spacing: .15em; line-height: 1.4; text-transform: uppercase; }
-.hero-copy .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--color-ink-soft); letter-spacing: .08em; text-transform: none; font-size: 11px; }
-.hero-copy .eyebrow .status-dot { flex: 0 0 7px; margin-left: 4px; }
-.status-dot { width: 7px; height: 7px; background: var(--color-blue-bright); border-radius: 50%; box-shadow: 0 0 0 4px rgb(0 160 223 / 16%); }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin: 28px 0 23px; font-size: clamp(4.4rem, 7.3vw, 6.65rem); font-weight: 520; line-height: .94; letter-spacing: -.035em; }
 h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing: -.075em; }
@@ -124,7 +121,6 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .text-link:hover span { transform: translate(2px, -2px); }
 .opensource-section { margin-top: var(--section-space); padding: 28px 31px 31px; border-radius: var(--radius-md); background: var(--color-surface-strong); color: var(--color-text-on-strong); }
 .opensource-label { display: flex; justify-content: space-between; padding-bottom: 25px; border-bottom: 1px solid rgb(245 244 239 / 15%); color: rgb(245 244 239 / 48%); }
-.open-index { font-size: 9px; letter-spacing: .1em; }
 .opensource-main { min-height: 145px; display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 23px; }
 .terminal-mark { position: relative; display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid rgb(245 244 239 / 22%); border-radius: 14px; color: var(--color-blue-light); font-family: ui-monospace, monospace; font-size: 18px; }
 .terminal-mark i { position: absolute; width: 3px; height: 3px; background: rgb(245 244 239 / 45%); border-radius: 50%; }.terminal-mark i:nth-child(2) { right: 10px; top: 10px; }.terminal-mark i:nth-child(3) { right: 18px; top: 10px; }.terminal-mark i:nth-child(4) { right: 26px; top: 10px; }

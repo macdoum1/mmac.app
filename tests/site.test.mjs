@@ -12,6 +12,9 @@ test('built page contains the verified portfolio projects', () => {
   assert.match(html, /Thoughtful apps and games, from arcade runs to recipe imports\./);
   assert.doesNotMatch(html, /APPS &amp; PROJECTS|A few things I’ve made/);
   assert.doesNotMatch(html, /PLNK · 30 DROPS/);
+  const projectList = html.slice(html.indexOf('id="work"'));
+  const projectOrder = ['PLNK', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount'].map((name) => projectList.indexOf(name));
+  assert.deepEqual(projectOrder, [...projectOrder].sort((a, b) => a - b), 'PLNK leads the project list');
 });
 
 test('built page links to the requested public destinations', () => {
@@ -36,9 +39,10 @@ test('the site has no guessed email address or private repository links', () => 
   assert.doesNotMatch(html, /github\.com\/macdoum1\/(?:PLNK|TapTapCount|VerdantLedger|Recipe-Hound)/i);
 });
 
-test('the page uses its always-dark palette and the corrected location', () => {
+test('the page uses its always-dark palette and does not overplay location', () => {
   assert.match(html, /name="theme-color" content="#0c1421"/);
-  assert.match(html, /Making apps and games in New Jersey/);
+  assert.match(html, /I build iOS apps, small games, and developer tools\./);
+  assert.doesNotMatch(html, /New Jersey/);
   assert.doesNotMatch(html, /Independent developer/);
 });
 
@@ -50,6 +54,7 @@ test('navigation points to useful sections and omits the future-work placeholder
   assert.match(html, /href="https:\/\/github\.com\/macdoum1"[^>]*>GitHub/);
   assert.doesNotMatch(html, /01—04/);
   assert.doesNotMatch(html, /01 \/ IN MOTION/);
+  assert.doesNotMatch(html, /01 \/ 01/);
   assert.doesNotMatch(html, /More worlds to explore|THE NEXT THING/);
 });
 
