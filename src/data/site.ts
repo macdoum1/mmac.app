@@ -3,7 +3,7 @@ export const profile = {
   domain: 'mmac.app',
   description: 'Mike MacDougall makes apps and games, works on Etsy’s apps and website, and explores agentic development.',
   bio: [
-    'I first tried app development in a college bioinformatics class, expecting to go into biomedical research. I loved building apps and getting thoughtful experiences into people’s hands. I joined Etsy in 2014 and have spent nearly 13 years working across its apps and website.',
+    'An app project for a college bioinformatics class changed my plans for biomedical research. I followed it with two years of contract app work during college, and I’ve now spent more than 15 years building software professionally. Since joining Etsy in 2014, I’ve worked across its apps and website.',
     'I’m also exploring agentic development by building agents and working with local models, so I can take on projects beyond my usual expertise.',
   ],
   links: [
