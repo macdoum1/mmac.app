@@ -8,6 +8,9 @@ test('built page contains the verified portfolio projects', () => {
   for (const name of ['PLNK', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount', 'howsigned']) {
     assert.ok(html.includes(name), `missing project: ${name}`);
   }
+  assert.match(html, /id="work-title">Built solo\./);
+  assert.match(html, /Thoughtful apps and games, from arcade runs to recipe imports\./);
+  assert.doesNotMatch(html, /APPS &amp; PROJECTS|A few things I’ve made/);
 });
 
 test('built page links to the requested public destinations', () => {

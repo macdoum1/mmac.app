@@ -21,13 +21,12 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
           <div class="floating-note"><span class="note-glyph">↘</span><span>Find your line.<br /><strong>Make it count.</strong></span></div>
           <span class="hero-orbit orbit-one"></span><span class="hero-orbit orbit-two"></span>
         </div>
-        <div class="hero-index"><span>APPS & PROJECTS</span></div>
       </section>
 
       <section id="work" class="work-section section-wrap" aria-labelledby="work-title">
         <div class="section-heading">
-          <div><p class="eyebrow">A few things I’ve made</p><h2 id="work-title">Built solo.<br /><em>Made with care.</em></h2></div>
-          <p class="section-intro">From arcade runs to recipe imports, each one starts with a small problem worth solving.</p>
+          <h2 id="work-title">Built solo.</h2>
+          <p class="section-intro">Thoughtful apps and games, from arcade runs to recipe imports.</p>
         </div>
         <div class="project-grid">
           {apps.map((app, index) => <ProjectCard app={app} index={index} />)}
