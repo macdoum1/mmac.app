@@ -64,7 +64,7 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
         <div class="about-body"><h2 id="about-title">Hi, I’m Mike.<br /><em>I like making things.</em></h2><div><p>{profile.intro} This is where I keep the work I’m proud to share.</p><div class="social-links">{profile.links.map(link => <a class="text-link" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</div></div></div>
       </section>
     </main>
-    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><span>m.</span></span><span>{profile.domain}</span></a><span>Designed and built with care.</span><a href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><span class="copyright">© {new Date().getFullYear()} Mike MacDougall</span></footer>
+    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><span class="wordmark-glyph"><span>m</span><i aria-hidden="true"></i></span></span><span>{profile.domain}</span></a><span>Designed and built with care.</span><a href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><span class="copyright">© {new Date().getFullYear()} Mike MacDougall</span></footer>
   </div>
 </SiteLayout>
 
