@@ -4,7 +4,7 @@ export const profile = {
   description: 'Mike MacDougall makes apps and games, works on Etsy’s apps and website, and explores agentic development.',
   bio: [
     'I first tried app development in a college bioinformatics class, expecting to go into biomedical research. I loved building apps and getting thoughtful experiences into people’s hands. I joined Etsy in 2014 and have spent nearly 13 years working across its apps and website.',
-    'Recently, I’ve been exploring agentic development—building agents and working with local models to take on projects beyond my usual expertise.',
+    'I’m also exploring agentic development by building agents and working with local models, so I can take on projects beyond my usual expertise.',
   ],
   links: [
     { label: 'GitHub', href: 'https://github.com/macdoum1' },

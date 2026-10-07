@@ -9,7 +9,8 @@ test('built page contains the verified portfolio projects', () => {
     assert.ok(html.includes(name), `missing project: ${name}`);
   }
   assert.match(html, /id="work-title">Built solo\./);
-  assert.match(html, /Thoughtful apps and games, from arcade runs to recipe imports\./);
+  assert.doesNotMatch(html, /Thoughtful apps and games, from arcade runs to recipe imports\./);
+  assert.doesNotMatch(html, /Making things takes many forms\./);
   assert.doesNotMatch(html, /APPS &amp; PROJECTS|A few things I’ve made/);
   assert.doesNotMatch(html, /PLNK · 30 DROPS/);
   const projectList = html.slice(html.indexOf('id="work"'));

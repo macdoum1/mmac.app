@@ -24,7 +24,6 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
       <section id="work" class="work-section section-wrap" aria-labelledby="work-title">
         <div class="section-heading">
           <h2 id="work-title">Built solo.</h2>
-          <p class="section-intro">Thoughtful apps and games, from arcade runs to recipe imports.</p>
         </div>
         <div class="project-grid">
           {apps.map((app, index) => <ProjectCard app={app} index={index} />)}
@@ -49,7 +48,6 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
       <section id="elsewhere" class="other-section section-wrap" aria-labelledby="other-title">
         <div class="section-heading compact-heading">
           <div><p class="eyebrow">Away from the screen</p><h2 id="other-title">A few other <em>interests.</em></h2></div>
-          <p class="section-intro">Making things takes many forms.</p>
         </div>
         <div class="interest-grid">
           {outsideTheAppStore.map(item => <a class="interest-card" href={item.href} target="_blank" rel="noreferrer"><span class="interest-mark" aria-hidden="true">{item.mark}</span><span class="interest-copy"><strong>{item.label}</strong><small>{item.note}</small></span><span class="interest-arrow" aria-hidden="true">↗</span></a>)}
