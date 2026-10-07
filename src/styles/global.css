@@ -103,6 +103,7 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .project-subtitle { margin: 0 0 10px; color: var(--color-ink-soft); font-family: var(--font-serif); font-size: 14px; font-style: italic; }
 .project-description { max-width: 440px; min-height: 42px; margin-bottom: 14px; color: var(--color-ink-soft); font-size: 12px; line-height: 1.65; }
 .text-link { display: inline-flex; gap: 12px; align-items: center; font-size: 11px; font-weight: 600; }
+.project-links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
 .text-link span { color: var(--color-blue-light); font-size: 15px; transition: transform .2s ease; }
 .text-link:hover span { transform: translate(2px, -2px); }
 .opensource-section { margin-top: var(--section-space); padding: 28px 31px 31px; border-radius: var(--radius-md); background: var(--color-surface-strong); color: var(--color-text-on-strong); }
@@ -131,8 +132,8 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .about-body h2 { margin-top: 16px; font-size: clamp(2.8rem, 5vw, 4.2rem); }
 .about-body > div { padding-bottom: 5px; }.about-body > div > p { max-width: 560px; margin-bottom: 16px; color: var(--color-ink-soft); font-size: 13px; line-height: 1.8; }
 .social-links { display: flex; gap: 24px; }
-.site-footer { min-height: 80px; display: grid; grid-template-columns: 1fr 1fr 1fr auto; align-items: center; gap: 18px; border-top: 1px solid var(--color-line); color: var(--color-ink-soft); font-size: 9px; }
-.site-footer > span:nth-child(2) { text-align: center; }.site-footer > a:nth-child(3) { justify-self: center; }.site-footer .copyright { color: var(--color-ink-faint); text-align: right; }
+.site-footer { min-height: 80px; display: grid; grid-template-columns: 1fr 1fr auto auto auto; align-items: center; gap: 18px; border-top: 1px solid var(--color-line); color: var(--color-ink-soft); font-size: 9px; }
+.site-footer > span:nth-child(2) { text-align: center; }.site-footer > a:nth-child(3), .site-footer > a:nth-child(4) { justify-self: center; }.site-footer .copyright { color: var(--color-ink-faint); text-align: right; }
 
 @media (min-width: 1450px) { .page-shell { width: min(100% - 96px, 1240px); --content-width: 1240px; } }
 @media (max-width: 800px) {
@@ -145,7 +146,7 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
   .open-links { grid-column: 2; }
   .about-body { gap: 35px; }
   .site-footer { grid-template-columns: 1fr 1fr; padding-block: 20px; }
-  .site-footer > span:nth-child(2) { text-align: right; }.site-footer > a:nth-child(3) { justify-self: start; }.site-footer .copyright { justify-self: end; }
+  .site-footer > span:nth-child(2) { text-align: right; }.site-footer > a:nth-child(3), .site-footer > a:nth-child(4) { justify-self: start; }.site-footer .copyright { justify-self: end; }
 }
 @media (min-width: 651px) and (max-width: 900px) {
   .site-header nav { gap: clamp(10px, 1.6vw, 15px); font-size: 11px; }
@@ -165,7 +166,7 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
   .opensource-section { margin-top: var(--section-space); padding: 23px 19px; }.opensource-main { grid-template-columns: 1fr; gap: 16px; padding-top: 22px; }.terminal-mark { display: none; }.opensource-copy h2 { font-size: 23px; }.open-links { grid-column: 1; flex-wrap: wrap; }
   .other-section { padding-top: var(--section-space); }.compact-heading h2 { font-size: 2.6rem; }.interest-grid { grid-template-columns: 1fr; gap: 10px; }.interest-card { min-height: 88px; }
   .about-section { padding-top: var(--section-space); padding-bottom: var(--section-space); }.about-body { display: block; }.about-body h2 { margin-bottom: 22px; }.about-body > div > p { font-size: 12px; }.social-links { gap: 22px; }
-  .site-footer { gap: 14px 8px; font-size: 8px; }.site-footer > span:nth-child(2) { max-width: 135px; justify-self: end; }.site-footer > a:nth-child(3) { justify-self: start; }.site-footer .copyright { max-width: 140px; }
+  .site-footer { gap: 14px 8px; font-size: 8px; }.site-footer > span:nth-child(2) { max-width: 135px; justify-self: end; }.site-footer > a:nth-child(3), .site-footer > a:nth-child(4) { justify-self: start; }.site-footer .copyright { max-width: 140px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

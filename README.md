@@ -1,6 +1,6 @@
 # mmac.app
 
-Mike MacDougall’s personal portfolio, built as a static Astro site. The repository is private and this setup does not publish the site.
+Mike MacDougall’s personal portfolio, built as a static Astro site for public hosting at `mmac.app`. The GitHub source repository stays private.
 
 ## Run locally
 
@@ -35,8 +35,6 @@ The site always uses its dark theme. Layouts adapt from wide desktop to small sc
 
 `npm run build` runs Astro’s diagnostics and generates the static site in `dist/`. `npm test` checks the built page for required projects and links, and catches accidental private repository links or an invented email destination. GitHub Actions runs both checks on pushes, pull requests, and manual workflow dispatch. The workflow has read-only repository permission and contains no deployment step.
 
-## Hosting later
+## Hosting
 
-No GitHub Pages source or deployment workflow is configured. The existing privacy-policies Pages URLs are untouched. To host this portfolio later, first approve the site content and decide to make it public. Then enable GitHub Pages for this repository and add an explicit deploy workflow that builds `dist/` and publishes it. Configure `mmac.app` as the custom domain and point its DNS records to the selected Pages configuration.
-
-GitHub Pages publishes a publicly accessible website, even when the source repository is private. Anyone with the site URL can view it. Publishing should happen only after Mike approves the content and accepts that public access.
+The Astro build outputs a static site to `dist/`. The Sites hosting configuration points to that directory. Privacy policies are available at `/privacy/`, `/privacy/plnk/`, `/privacy/recipe-hound/`, and `/privacy/field-guide/`. The existing GitHub Pages privacy-policy URLs remain live for current app links.

@@ -23,6 +23,7 @@ export const apps = [
     image: '/images/apps/plnk-screen.jpg',
     imageAlt: 'A live PLNK game board with colored balls and scoring bins',
     href: 'https://apps.apple.com/us/app/plnk-pachinko-challenge/id1047962614',
+    privacyHref: '/privacy/plnk/',
     featured: true,
   },
   {
@@ -35,6 +36,7 @@ export const apps = [
     image: '/images/apps/recipe-hound-screen.jpg',
     imageAlt: 'Recipe Hound App Store preview screen',
     href: 'https://apps.apple.com/us/app/recipe-hound/id6760431706',
+    privacyHref: '/privacy/recipe-hound/',
     featured: true,
   },
   {
@@ -47,6 +49,7 @@ export const apps = [
     image: '/images/apps/verdant-ledger-screen.jpg',
     imageAlt: 'Verdant Ledger App Store preview screen',
     href: 'https://apps.apple.com/us/app/verdant-ledger/id6759935576',
+    privacyHref: '/privacy/field-guide/',
     featured: false,
   },
   {
