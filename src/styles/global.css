@@ -6,15 +6,15 @@
  */
 :root {
   color-scheme: dark;
-  /* Color: deep graphite, soft text, and Hamilton's official blues. */
-  --color-paper: #141916;
-  --color-paper-raised: #202722;
-  --color-ink: #eef1e9;
-  --color-ink-dark: #182018;
-  --color-ink-soft: #b4bdb4;
-  --color-ink-faint: #87928a;
-  --color-line: #353e37;
-  --color-surface-strong: #252e28;
+  /* Color: blue-tinted night surfaces, soft text, and Hamilton's official blues. */
+  --color-paper: #0c1421;
+  --color-paper-raised: #142238;
+  --color-ink: #eef3fb;
+  --color-ink-dark: #0b1b32;
+  --color-ink-soft: #b4c1d4;
+  --color-ink-faint: #8799b4;
+  --color-line: #2c3d57;
+  --color-surface-strong: #172d4e;
   --color-text-on-strong: #f2f4ed;
   --color-hamilton-blue: #002f86; /* Hamilton College Continental Blue */
   --color-blue-light: #8db8ff;
@@ -102,10 +102,10 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .section-intro { max-width: 260px; margin: 0 2px 7px 25px; color: var(--color-ink-soft); font-size: 12px; line-height: 1.7; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 28px; }
 .project-card { min-width: 0; }
-.project-visual { position: relative; height: 330px; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-md); background: #e7e8df; }
-.project-card:nth-child(2) .project-visual { background: #e9e2d6; }
-.project-card:nth-child(3) .project-visual { background: #e2e8d9; }
-.project-card:nth-child(4) .project-visual { background: #e7e4ee; }
+.project-visual { position: relative; height: 330px; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-md); background: #172944; }
+.project-card:nth-child(2) .project-visual { background: #1a2d49; }
+.project-card:nth-child(3) .project-visual { background: #172b48; }
+.project-card:nth-child(4) .project-visual { background: #1c2b46; }
 .project-screen { position: absolute; height: 82%; width: 40%; max-width: 210px; object-fit: cover; object-position: top; border: 5px solid #202522; border-radius: 17px; box-shadow: var(--shadow-card); transform: rotate(3deg) translate(8%, 5%); transition: transform .45s cubic-bezier(.2,.75,.2,1); }
 .project-card:nth-child(even) .project-screen { transform: rotate(-3deg) translate(8%, 5%); }
 .project-card:nth-child(2) .project-screen, .project-card:nth-child(3) .project-screen { object-fit: cover; }

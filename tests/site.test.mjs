@@ -31,7 +31,7 @@ test('the site has no guessed email address or private repository links', () => 
 });
 
 test('the page uses its always-dark palette and the corrected location', () => {
-  assert.match(html, /name="theme-color" content="#141916"/);
+  assert.match(html, /name="theme-color" content="#0c1421"/);
   assert.match(html, /Independent developer · New Jersey/);
   assert.doesNotMatch(html, /Independent developer · New York/);
 });
