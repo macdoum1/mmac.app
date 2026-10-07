@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 
@@ -34,4 +34,14 @@ test('the page uses its always-dark palette and the corrected location', () => {
   assert.match(html, /name="theme-color" content="#141916"/);
   assert.match(html, /Independent developer · New Jersey/);
   assert.doesNotMatch(html, /Independent developer · New York/);
+});
+
+test('the stylesheet uses Hamilton blue accents instead of green', async () => {
+  const stylesDirectory = new URL('../dist/_astro/', import.meta.url);
+  const cssFile = (await readdir(stylesDirectory)).find((file) => file.endsWith('.css'));
+  assert.ok(cssFile, 'built stylesheet exists');
+  const css = await readFile(new URL(cssFile, stylesDirectory), 'utf8');
+  assert.match(css, /--color-hamilton-blue:\s*#002f86/);
+  assert.match(css, /--color-blue-bright:\s*#00a0df/);
+  assert.doesNotMatch(css, /--color-green|#c8ee70/);
 });
