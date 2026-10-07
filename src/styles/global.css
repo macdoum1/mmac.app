@@ -90,7 +90,7 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .floating-note strong { color: var(--color-ink); font-weight: 500; }
 .note-glyph { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; background: var(--color-blue-bright); color: var(--color-ink-dark); font-family: var(--font-sans); font-style: normal; font-size: 16px; }
 .hero-orbit { position: absolute; z-index: 2; width: 25px; height: 25px; border: 1px solid rgb(27 33 30 / 25%); border-radius: 50%; }
-.orbit-one { top: 91px; right: 48px; }.orbit-two { right: 47px; bottom: 157px; width: 8px; height: 8px; border: 0; background: #f6a377; }
+.orbit-one { top: 91px; right: 48px; }
 .section-wrap { padding-inline: 2px; }
 .work-section { padding-top: 1.5rem; border-top: 1px solid var(--color-line); }
 .section-heading { margin-bottom: 40px; }
@@ -178,7 +178,7 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
   .hero-art { width: 100%; height: 355px; margin: 15px 0 3px; transform: none; }
   .hero-art::before { inset: 20px 18px 20px 13px; }
   .board-frame { top: 29px; left: calc(50% - 112px); width: 204px; height: 328px; border-width: 6px; }
-  .floating-note { bottom: 10px; right: 3px; }.orbit-one { top: 54px; right: 20px; }.orbit-two { right: 18px; bottom: 115px; }
+  .floating-note { bottom: 10px; right: 3px; }.orbit-one { top: 54px; right: 20px; }
   .work-section { padding-top: 1.5rem; }.section-heading { margin-bottom: 31px; }.section-heading h2, .about-body h2 { font-size: 3rem; }
   .project-grid { grid-template-columns: 1fr; gap: 37px; }.project-visual { height: min(88vw, 360px); }.project-screen { width: 43%; height: 85%; }.project-copy { padding-top: 17px; }.project-description { min-height: 0; }
   .opensource-section { margin-top: var(--section-space); padding: 23px 19px; }.opensource-main { grid-template-columns: 1fr; gap: 16px; padding-top: 22px; }.terminal-mark { display: none; }.opensource-copy h2 { font-size: 23px; }.open-links { grid-column: 1; flex-wrap: wrap; }
