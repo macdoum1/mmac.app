@@ -89,7 +89,6 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .button-dark span { color: var(--color-white); font-size: 16px; }
 .hero-art { height: 435px; width: min(100%, 495px); justify-self: end; position: relative; isolation: isolate; }
 .hero-art::before { content: ""; position: absolute; inset: 55px 10px 27px 22px; border-radius: 48% 52% 47% 53% / 51% 45% 55% 49%; background: var(--color-blue-bright); transform: rotate(-8deg); }
-.art-caption { position: absolute; top: 25px; left: 37px; right: 13px; z-index: 2; display: flex; justify-content: flex-end; color: var(--color-ink-soft); font-size: 8px; font-weight: 650; letter-spacing: .13em; }
 .board-frame { position: absolute; z-index: 1; top: 31px; left: 86px; width: 236px; height: 390px; overflow: hidden; border: 7px solid #161c29; border-radius: 27px; background: var(--color-board); box-shadow: 0 28px 55px rgb(19 27 20 / 24%); transform: rotate(7deg); }
 .board-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .board-glow { position: absolute; z-index: 1; top: 30%; left: 30%; width: 50px; height: 50px; border-radius: 50%; background: #b965e9; filter: blur(17px); opacity: .55; }
@@ -161,7 +160,6 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
   .hero-art { height: 390px; transform: scale(.9); transform-origin: center right; margin-left: -25px; }
   .board-frame { width: 213px; height: 365px; left: 58px; }
   .hero-art::before { inset: 43px 0 20px 12px; }
-  .art-caption { left: 20px; right: 1px; }
   .floating-note { right: -5px; bottom: 22px; }
   .project-visual { height: 285px; }
   .opensource-main { grid-template-columns: 60px 1fr; padding-top: 20px; gap: 15px; }
@@ -183,7 +181,6 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
   .hero-intro { max-width: 310px; font-size: 13px; }
   .hero-art { width: 100%; height: 355px; margin: 15px 0 3px; transform: none; }
   .hero-art::before { inset: 20px 18px 20px 13px; }
-  .art-caption { top: 13px; left: 28px; right: 25px; }
   .board-frame { top: 29px; left: calc(50% - 112px); width: 204px; height: 328px; border-width: 6px; }
   .floating-note { bottom: 10px; right: 3px; }.orbit-one { top: 54px; right: 20px; }.orbit-two { right: 18px; bottom: 115px; }
   .work-section { padding-top: 1.5rem; }.section-heading { display: block; margin-bottom: 31px; }.section-heading h2, .about-body h2 { font-size: 3rem; }.section-intro { margin: 18px 0 0; max-width: 280px; }
