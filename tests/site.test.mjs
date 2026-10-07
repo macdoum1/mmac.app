@@ -39,9 +39,12 @@ test('the page uses its always-dark palette and the corrected location', () => {
 });
 
 test('navigation points to useful sections and omits the future-work placeholder', () => {
-  assert.match(html, /href="#work">Apps<\/a>/);
-  assert.match(html, /href="#open-source">Open source<\/a>/);
+  assert.match(html, /href="#work">Apps &amp; Games<\/a>/);
+  assert.match(html, /href="#open-source">Open Source<\/a>/);
   assert.match(html, /href="#elsewhere">Elsewhere<\/a>/);
+  assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/mjmacdougall\/"[^>]*>LinkedIn/);
+  assert.match(html, /href="https:\/\/github\.com\/macdoum1"[^>]*>GitHub/);
+  assert.doesNotMatch(html, /01—04/);
   assert.doesNotMatch(html, /More worlds to explore|THE NEXT THING/);
 });
 
