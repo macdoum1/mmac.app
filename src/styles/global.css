@@ -62,11 +62,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 a:focus-visible { outline: 3px solid var(--color-blue-light); outline-offset: 5px; border-radius: 3px; }
 .page-shell { width: min(100% - 64px, var(--content-width)); margin-inline: auto; }
 .site-header { height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-line); }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 650; letter-spacing: -.025em; }
-.wordmark-mark { position: relative; display: block; flex: 0 0 30px; width: 30px; height: 30px; border-radius: 50%; background: var(--color-surface-strong); color: var(--color-blue-light); font-family: var(--font-serif); font-size: 17px; font-style: italic; }
-.wordmark-glyph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 1px; line-height: 1; white-space: nowrap; }
-.wordmark-glyph > span { line-height: 1; }
-.wordmark-glyph > i { width: 2.5px; height: 2.5px; margin-top: 5px; border-radius: 50%; background: currentColor; }
+.wordmark { display: inline-flex; align-items: center; justify-content: center; min-height: 30px; padding: 8px 12px; border-radius: var(--radius-sm); background: var(--color-hamilton-blue); color: var(--color-white); font-size: 13px; font-weight: 650; letter-spacing: -.025em; line-height: 1; transition: background .2s ease; }
+.wordmark:hover { background: #1749a0; color: var(--color-white); }
 .site-header nav { display: flex; align-items: center; gap: 23px; font-size: 12px; font-weight: 550; }
 .site-header nav a { transition: color .2s ease; }
 .site-header nav a:hover, .site-footer a:hover { color: var(--color-blue-light); }
