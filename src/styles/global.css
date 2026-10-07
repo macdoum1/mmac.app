@@ -129,6 +129,8 @@ h1 em, h2 em { font-family: var(--font-serif); font-weight: 400; letter-spacing:
 .opensource-copy h2 { margin: 0 0 8px; font-family: ui-monospace, "SFMono-Regular", monospace; font-size: 26px; font-weight: 500; letter-spacing: -.06em; }
 .period { color: var(--color-blue-light); }
 .opensource-copy p { max-width: 410px; margin: 0; color: rgb(245 244 239 / 64%); font-size: 11px; line-height: 1.65; }
+.gem-downloads { display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px; margin-top: 13px; color: rgb(242 244 237 / 66%); font-size: 10px; }
+.gem-downloads strong { color: var(--color-blue-light); font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; }
 .open-links { display: flex; gap: 9px; }
 .button-light { gap: 16px; padding: 11px 13px; border-color: rgb(245 244 239 / 22%); color: var(--color-text-on-strong); font-size: 10px; }.button-light span { color: var(--color-blue-light); }
 .other-section { padding-top: var(--section-space); }

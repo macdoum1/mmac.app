@@ -62,6 +62,7 @@ export const apps = [
 export const openSource = {
   name: 'howsigned',
   description: 'A Ruby gem for inspecting the code signatures inside an iOS app package.',
+  downloadsApi: 'https://rubygems.org/api/v1/gems/howsigned.json',
   links: [
     { label: 'GitHub', href: 'https://github.com/macdoum1/howsigned' },
     { label: 'RubyGems', href: 'https://rubygems.org/gems/howsigned' },

@@ -17,6 +17,8 @@ The first version includes four App Store listings verified through Apple’s ca
 
 App icons and preview screenshots in `public/images/apps/` are actual assets from Apple’s App Store catalog for those apps. They are included to represent the published apps, not as generated artwork. The source of each image can be found by looking up the matching app ID through Apple’s iTunes Search API or its App Store listing.
 
+The howsigned card reads its total download count from RubyGems’ public gem metadata API when the page loads. If the request is unavailable, the count displays as unavailable and the RubyGems link remains available.
+
 ## Design system
 
 The design system is documented at the top of [src/styles/global.css](src/styles/global.css). It defines:

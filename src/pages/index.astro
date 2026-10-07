@@ -38,7 +38,13 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
         <div class="opensource-label"><span class="eyebrow">OPEN SOURCE</span><span class="open-index">01 / 01</span></div>
         <div class="opensource-main">
           <div class="terminal-mark" aria-hidden="true"><span>$_</span><i></i><i></i><i></i></div>
-          <div class="opensource-copy"><h2 id="open-title">{openSource.name}<span class="period">.</span></h2><p>{openSource.description}</p></div>
+          <div class="opensource-copy">
+            <h2 id="open-title">{openSource.name}<span class="period">.</span></h2>
+            <p>{openSource.description}</p>
+            <div class="gem-downloads" role="status" aria-live="polite" data-gem-downloads-api={openSource.downloadsApi}>
+              <strong data-download-count>Loading</strong><span>total downloads on RubyGems</span>
+            </div>
+          </div>
           <div class="open-links">{openSource.links.map(link => <a class="button button-light" href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}</div>
         </div>
       </section>
@@ -61,3 +67,23 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
     <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark">m.</span><span>{profile.domain}</span></a><span>Designed and built with care.</span><a href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><span class="copyright">© {new Date().getFullYear()} Mike MacDougall</span></footer>
   </div>
 </SiteLayout>
+
+<script>
+  const downloadCount = document.querySelector<HTMLElement>('[data-download-count]');
+  const downloadsContainer = document.querySelector<HTMLElement>('[data-gem-downloads-api]');
+  const downloadsApi = downloadsContainer?.dataset.gemDownloadsApi;
+
+  if (downloadCount && downloadsApi) {
+    try {
+      const response = await fetch(downloadsApi, { headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('RubyGems request failed');
+
+      const gem = await response.json() as { downloads?: number };
+      if (typeof gem.downloads !== 'number') throw new Error('RubyGems returned no total');
+
+      downloadCount.textContent = new Intl.NumberFormat('en-US').format(gem.downloads);
+    } catch {
+      downloadCount.textContent = 'Unavailable';
+    }
+  }
+</script>

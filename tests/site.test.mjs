@@ -23,6 +23,8 @@ test('built page links to the requested public destinations', () => {
   ]) {
     assert.ok(html.includes(href), `missing destination: ${href}`);
   }
+  assert.ok(html.includes('data-gem-downloads-api="https://rubygems.org/api/v1/gems/howsigned.json"'));
+  assert.ok(html.includes('total downloads on RubyGems'));
 });
 
 test('the site has no guessed email address or private repository links', () => {
