@@ -2,7 +2,7 @@
 import SiteLayout from '@/layouts/SiteLayout.astro';
 import SiteNav from '@/components/SiteNav.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
-import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/site';
+import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
 ---
 <SiteLayout>
   <div id="top" class="page-shell">
@@ -10,10 +10,10 @@ import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/si
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> Independent developer · New Jersey</p>
+          <p class="eyebrow"><span class="status-dot"></span> Making apps and games in New Jersey</p>
           <h1 id="hero-title">Good ideas<br />deserve <em>to ship.</em></h1>
           <p class="hero-intro">I’m Mike. I build thoughtful apps, playful games, and tools that make everyday things a little better.</p>
-          <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="button button-dark" href="#work">View the apps <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-art" aria-label="A glimpse of PLNK, a pachinko inspired game">
           <div class="art-caption"><span>01 / IN MOTION</span><span>PLNK · 30 DROPS</span></div>
@@ -21,7 +21,7 @@ import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/si
           <div class="floating-note"><span class="note-glyph">↘</span><span>Find your line.<br /><strong>Make it count.</strong></span></div>
           <span class="hero-orbit orbit-one"></span><span class="hero-orbit orbit-two"></span>
         </div>
-        <div class="hero-index"><span>SELECTED WORK</span><span>01—04</span></div>
+        <div class="hero-index"><span>APPS & PROJECTS</span><span>01—04</span></div>
       </section>
 
       <section id="work" class="work-section section-wrap" aria-labelledby="work-title">
@@ -34,7 +34,7 @@ import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/si
         </div>
       </section>
 
-      <section class="opensource-section section-wrap" aria-labelledby="open-title">
+      <section id="open-source" class="opensource-section section-wrap" aria-labelledby="open-title">
         <div class="opensource-label"><span class="eyebrow">OPEN SOURCE</span><span class="open-index">01 / 01</span></div>
         <div class="opensource-main">
           <div class="terminal-mark" aria-hidden="true"><span>$_</span><i></i><i></i><i></i></div>
@@ -43,7 +43,7 @@ import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/si
         </div>
       </section>
 
-      <section class="other-section section-wrap" aria-labelledby="other-title">
+      <section id="elsewhere" class="other-section section-wrap" aria-labelledby="other-title">
         <div class="section-heading compact-heading">
           <div><p class="eyebrow">Away from the screen</p><h2 id="other-title">A few other <em>interests.</em></h2></div>
           <p class="section-intro">Making things takes many forms.</p>
@@ -51,12 +51,6 @@ import { apps, nextUp, openSource, outsideTheAppStore, profile } from '@/data/si
         <div class="interest-grid">
           {outsideTheAppStore.map(item => <a class="interest-card" href={item.href} target="_blank" rel="noreferrer"><span class="interest-mark" aria-hidden="true">{item.mark}</span><span class="interest-copy"><strong>{item.label}</strong><small>{item.note}</small></span><span class="interest-arrow" aria-hidden="true">↗</span></a>)}
         </div>
-      </section>
-
-      <section class="next-section" aria-label="Future work">
-        <div class="next-orbit" aria-hidden="true"><span>+</span><i></i></div>
-        <div><p class="eyebrow">THE NEXT THING</p><h2>{nextUp.title}</h2><p>{nextUp.description}</p></div>
-        <span class="next-coordinate" aria-hidden="true">40° 43′ N<br />73° 59′ W</span>
       </section>
 
       <section id="about" class="about-section section-wrap" aria-labelledby="about-title">

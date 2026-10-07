@@ -11,7 +11,7 @@ npm run dev
 
 ## Content
 
-Edit [src/data/site.ts](src/data/site.ts) to update the profile, project descriptions, App Store destinations, open source links, interests, and future work prompt. Project cards are rendered from this data by the reusable `ProjectCard` component.
+Edit [src/data/site.ts](src/data/site.ts) to update the profile, project descriptions, App Store destinations, open source links, and interests. Project cards are rendered from this data by the reusable `ProjectCard` component.
 
 The first version includes four App Store listings verified through Apple’s catalog on October 7, 2026: PLNK, Recipe Hound, Verdant Ledger, and TapTapCount. Verdant Ledger is described as an unofficial Pokopia companion, matching its listing. Its relationship to Nintendo and The Pokémon Company is not implied to be official.
 

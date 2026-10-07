@@ -72,8 +72,3 @@ export const outsideTheAppStore = [
   { label: '3D prints', note: 'Objects made for the real world', href: 'https://makerworld.com/en/@Applemilk', mark: '3D' },
   { label: 'Photography', note: 'A collection of photographs', href: 'https://michaelmacdougallphotography.mypixieset.com', mark: 'P' },
 ];
-
-export const nextUp = {
-  title: 'More worlds to explore',
-  description: 'There’s room here for the next game, and the ones after that.',
-};

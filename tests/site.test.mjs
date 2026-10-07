@@ -32,8 +32,15 @@ test('the site has no guessed email address or private repository links', () => 
 
 test('the page uses its always-dark palette and the corrected location', () => {
   assert.match(html, /name="theme-color" content="#0c1421"/);
-  assert.match(html, /Independent developer · New Jersey/);
-  assert.doesNotMatch(html, /Independent developer · New York/);
+  assert.match(html, /Making apps and games in New Jersey/);
+  assert.doesNotMatch(html, /Independent developer/);
+});
+
+test('navigation points to useful sections and omits the future-work placeholder', () => {
+  assert.match(html, /href="#work">Apps<\/a>/);
+  assert.match(html, /href="#open-source">Open source<\/a>/);
+  assert.match(html, /href="#elsewhere">Elsewhere<\/a>/);
+  assert.doesNotMatch(html, /More worlds to explore|THE NEXT THING/);
 });
 
 test('the stylesheet uses Hamilton blue accents instead of green', async () => {
