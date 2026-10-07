@@ -21,13 +21,13 @@ App icons and preview screenshots in `public/images/apps/` are actual assets fro
 
 The design system is documented at the top of [src/styles/global.css](src/styles/global.css). It defines:
 
-- Color tokens for warm paper, ink, muted text, borders, citrus accent, and PLNK’s game board.
+- Color tokens for dark graphite surfaces, soft text, borders, citrus accent, and PLNK’s game board.
 - Typography tokens for the system sans face, editorial serif accents, and reading sizes.
 - A 4px based spacing scale for section rhythm and component padding.
 - Small, medium, large, and pill radii, plus card and floating-object shadows.
 - Reusable page structure, navigation, buttons, project cards, and interest links.
 
-Layouts adapt from wide desktop to small screens, include visible keyboard focus, semantic landmarks, descriptive image text, and reduced-motion support.
+The site always uses its dark theme. Layouts adapt from wide desktop to small screens, include visible keyboard focus, semantic landmarks, descriptive image text, and reduced-motion support.
 
 ## Validation
 

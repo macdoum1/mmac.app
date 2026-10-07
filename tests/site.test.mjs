@@ -29,3 +29,9 @@ test('the site has no guessed email address or private repository links', () => 
   assert.doesNotMatch(html, /mailto:/);
   assert.doesNotMatch(html, /github\.com\/macdoum1\/(?:PLNK|TapTapCount|VerdantLedger|Recipe-Hound)/i);
 });
+
+test('the page uses its always-dark palette and the corrected location', () => {
+  assert.match(html, /name="theme-color" content="#141916"/);
+  assert.match(html, /Independent developer · New Jersey/);
+  assert.doesNotMatch(html, /Independent developer · New York/);
+});
