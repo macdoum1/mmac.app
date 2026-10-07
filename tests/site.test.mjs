@@ -45,6 +45,7 @@ test('navigation points to useful sections and omits the future-work placeholder
   assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/mjmacdougall\/"[^>]*>LinkedIn/);
   assert.match(html, /href="https:\/\/github\.com\/macdoum1"[^>]*>GitHub/);
   assert.doesNotMatch(html, /01—04/);
+  assert.doesNotMatch(html, /01 \/ IN MOTION/);
   assert.doesNotMatch(html, /More worlds to explore|THE NEXT THING/);
 });
 
