@@ -1,10 +1,17 @@
 ---
 const { app, index = 0 } = Astro.props;
 ---
-<article class:list={['project-card', app.featured && 'project-card-featured', app.name === 'TapTapCount' && 'project-card-taptapcount', app.name === 'PLNK' && 'project-card-plnk', app.name === 'Recipe Hound' && 'project-card-recipe-hound', app.name === 'Verdant Ledger' && 'project-card-verdant-ledger']} style={`--card-index:${index}`}>
+<article class:list={['project-card', app.featured && 'project-card-featured', app.name === 'PLNK' && 'project-card-plnk', app.name === 'Recipe Hound' && 'project-card-recipe-hound', app.name === 'Verdant Ledger' && 'project-card-verdant-ledger', app.name === 'TapTapCount' && 'project-card-taptapcount']} style={`--card-index:${index}`}>
   <a class="project-visual" href={app.href} target="_blank" rel="noreferrer" aria-label={`View ${app.name} on the App Store`}>
     <img class="project-icon" src={app.icon} alt="" loading="lazy" />
     <span class="project-screen-frame"><img class="project-screen" src={app.image} alt={app.imageAlt} loading="lazy" /></span>
+    {app.watchImage && (
+      <span class="project-watch-device">
+        <span class="project-watch-frame">
+          <img class="project-watch-screen" src={app.watchImage} alt={app.watchImageAlt} width="416" height="496" loading="lazy" />
+        </span>
+      </span>
+    )}
     <span class="visual-arrow" aria-hidden="true">↗</span>
   </a>
   <div class="project-copy">

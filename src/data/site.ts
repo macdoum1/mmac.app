@@ -61,6 +61,8 @@ export const apps = [
     icon: '/images/apps/taptapcount-icon.jpg',
     image: '/images/apps/taptapcount-screen.jpg',
     imageAlt: 'TapTapCount App Store preview screen',
+    watchImage: '/images/apps/taptapcount-watch-screen.jpg',
+    watchImageAlt: 'TapTapCount on Apple Watch with count, plus and minus buttons, step controls, and Clear',
     href: 'https://apps.apple.com/us/app/taptapcount/id981734553',
     privacyHref: '/privacy/taptapcount/',
     featured: false,

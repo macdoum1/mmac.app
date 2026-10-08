@@ -3,10 +3,12 @@ import { profile } from '@/data/site';
 ---
 <header class="site-header">
   <a class="wordmark" href="#top" aria-label={`${profile.name}, home`}><span>{profile.domain}</span></a>
-  <nav aria-label="Main navigation">
+  <nav class="section-nav" aria-label="Main navigation">
     <a href="#work">Apps &amp; Games</a>
     <a href="#open-source">Open Source</a>
     <a class="nav-elsewhere" href="#elsewhere">Elsewhere</a>
+  </nav>
+  <nav class="profile-nav" aria-label="Social profiles">
     <a class="nav-contact" href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
     <a class="nav-contact" href="https://github.com/macdoum1" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
   </nav>
