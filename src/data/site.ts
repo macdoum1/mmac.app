@@ -62,6 +62,7 @@ export const apps = [
     image: '/images/apps/taptapcount-screen.jpg',
     imageAlt: 'TapTapCount App Store preview screen',
     href: 'https://apps.apple.com/us/app/taptapcount/id981734553',
+    privacyHref: '/privacy/taptapcount/',
     featured: false,
   },
 ];
