@@ -33,8 +33,8 @@ The site always uses its dark theme. Layouts adapt from wide desktop to small sc
 
 ## Validation
 
-`npm run build` runs Astro’s diagnostics and generates the static site in `dist/`. `npm test` checks the built page for required projects and links, and catches accidental private repository links or an invented email destination. GitHub Actions runs both checks on pushes, pull requests, and manual workflow dispatch. The workflow has read-only repository permission and contains no deployment step.
+`npm run build` runs Astro’s diagnostics and generates the static site in `dist/`. `npm test` checks the built page for required projects and links, and catches accidental private repository links or an invented email destination. GitHub Actions runs both checks on pushes, pull requests, and manual workflow dispatch.
 
 ## Hosting
 
-The Astro build outputs a static site to `dist/`. The Sites hosting configuration points to that directory. Privacy policies are available at `/privacy/`, `/privacy/plnk/`, `/privacy/recipe-hound/`, and `/privacy/field-guide/`. The existing GitHub Pages privacy-policy URLs remain live for current app links.
+The Astro build outputs a static site to `dist/`. GitHub Actions publishes that directory to GitHub Pages on pushes to `main`. The custom domain is `mmac.app`, configured in the repository's Pages settings and `public/CNAME`. The GitHub repository remains private; the published website is public. GitHub requires a paid plan to publish Pages from a private repository. Privacy policies are available at `/privacy/`, `/privacy/plnk/`, `/privacy/recipe-hound/`, `/privacy/field-guide/`, and `/privacy/taptapcount/`. The existing GitHub Pages privacy-policy URLs remain live for current app links.
