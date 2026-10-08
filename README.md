@@ -50,9 +50,9 @@ App icons and screenshots in `public/images/apps/` are actual published App Stor
 
 The iPhone screenshots currently have a width-to-height ratio of about `0.46`: `552 × 1200` for PLNK, Recipe Hound, and Verdant Ledger, and `1279 × 2778` for TapTapCount.
 
-The shared frame uses a `0.49` aspect ratio for its inner screen, with `box-sizing: content-box` so the bezel does not squeeze the image horizontally. The image is scaled proportionally to `106.5%` height and moved upward by `6.5%` of the screen height. This trims the status area from the top while preserving the bottom UI. The frame’s height calculation includes the 10px total bezel thickness.
+The shared frame uses a `0.46` aspect ratio to match the screenshots, with `box-sizing: content-box` so the bezel does not squeeze the image. The image fills the screen width, extends to `106.5%` height, and moves upward by `6.5%` to trim status areas while preserving the bottom UI. The small vertical crop also trims the image sides slightly so there are no side gutters. The frame’s height calculation includes the 10px total bezel thickness.
 
-When replacing a screenshot, check its dimensions before changing the frame or crop. Preserve the full image width, PLNK’s score gates, and each app’s bottom controls. Crop the actual screenshot to remove status bars and Dynamic Islands; avoid adding simulated status bars or colored patches. Check both mobile and desktop, including hover behavior.
+When replacing a screenshot, check its dimensions before changing the frame or crop. Preserve PLNK’s score gates and each app’s bottom controls. The current crop trims the status area and a little from each side; avoid adding simulated status bars or colored patches. Check both mobile and desktop, including hover behavior.
 
 TapTapCount also supplies optional `watchImage` and `watchImageAlt` fields. Its `416 × 496` Apple Watch screenshot is shown in a separate frame without cropping. Keep the Watch and iPhone controls visible when adjusting their placement.
 
