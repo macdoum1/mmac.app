@@ -71,6 +71,7 @@ export const openSource = {
   name: 'howsigned',
   description: 'A Ruby gem for inspecting the code signatures inside an iOS app package.',
   downloadsApi: 'https://rubygems.org/api/v1/gems/howsigned.json',
+  fallbackDownloads: 17213,
   links: [
     { label: 'GitHub', href: 'https://github.com/macdoum1/howsigned' },
     { label: 'RubyGems', href: 'https://rubygems.org/gems/howsigned' },
@@ -78,6 +79,26 @@ export const openSource = {
 };
 
 export const outsideTheAppStore = [
-  { label: '3D prints', note: 'Objects made for the real world', href: 'https://makerworld.com/en/@Applemilk', mark: '3D' },
-  { label: 'Photography', note: 'A collection of photographs', href: 'https://michaelmacdougallphotography.mypixieset.com', mark: 'P' },
+  {
+    label: '3D prints',
+    note: 'Small designs for everyday problems',
+    href: 'https://makerworld.com/en/@Applemilk',
+    photos: [
+      { src: '/images/prints/glowstick-keychains.webp' },
+      { src: '/images/prints/coat-rack-stabilizers.webp' },
+      { src: '/images/prints/laptop-mount.webp' },
+      { src: '/images/prints/xreal-case.webp' },
+    ],
+  },
+  {
+    label: 'Photography',
+    note: 'Landscapes, wildlife, cars, and the night sky',
+    href: 'https://michaelmacdougallphotography.mypixieset.com',
+    photos: [
+      { src: '/images/photography/orion-nebula.jpg' },
+      { src: '/images/photography/flamingos.jpg' },
+      { src: '/images/photography/sailboat.jpg' },
+      { src: '/images/photography/porsche.jpg' },
+    ],
+  },
 ];

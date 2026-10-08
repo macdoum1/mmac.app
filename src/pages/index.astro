@@ -32,8 +32,8 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
           <div class="opensource-copy">
             <h2 id="open-title">{openSource.name}<span class="period">.</span></h2>
             <p>{openSource.description}</p>
-            <div class="gem-downloads" role="status" aria-live="polite" data-gem-downloads-api={openSource.downloadsApi}>
-              <strong data-download-count>Loading</strong><span>total downloads on RubyGems</span>
+            <div class="gem-downloads" role="status" aria-live="polite" data-gem-downloads-api={openSource.downloadsApi} data-fallback-downloads={openSource.fallbackDownloads}>
+              <strong data-download-count>{openSource.fallbackDownloads.toLocaleString('en-US')}</strong><span data-download-label>last known downloads on RubyGems</span>
             </div>
           </div>
           <div class="open-links">{openSource.links.map(link => <a class="button button-light" href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}</div>
@@ -45,7 +45,10 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
           <div><p class="eyebrow">Away from the screen</p><h2 id="other-title">A few other <em>interests.</em></h2></div>
         </div>
         <div class="interest-grid">
-          {outsideTheAppStore.map(item => <a class="interest-card" href={item.href} target="_blank" rel="noreferrer"><span class="interest-mark" aria-hidden="true">{item.mark}</span><span class="interest-copy"><strong>{item.label}</strong><small>{item.note}</small></span><span class="interest-arrow" aria-hidden="true">↗</span></a>)}
+          {outsideTheAppStore.map(item => <a class="interest-card" href={item.href} target="_blank" rel="noreferrer">
+            <span class="interest-art interest-collage" aria-hidden="true">{item.photos.map(photo => <img src={photo.src} alt="" loading="lazy" />)}</span>
+            <span class="interest-copy"><strong>{item.label}</strong><small>{item.note}</small></span><span class="interest-arrow" aria-hidden="true">↗</span>
+          </a>)}
         </div>
       </section>
 
@@ -54,14 +57,31 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
         <div class="about-body"><h2 id="about-title">Hi, I’m Mike.</h2><div>{profile.bio.map(paragraph => <p>{paragraph}</p>)}<div class="social-links">{profile.links.map(link => <a class="text-link" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}</div></div></div>
       </section>
     </main>
-    <footer class="site-footer"><a class="wordmark" href="#top"><span>{profile.domain}</span></a><span>Designed and built with care.</span><a href="/privacy/">Privacy policies</a><a href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><span class="copyright">© {new Date().getFullYear()} Mike MacDougall</span></footer>
+    <footer class="site-footer"><a class="wordmark footer-brand" href="#top"><span>{profile.domain}</span></a><span class="footer-tagline">Designed and built with care.</span><a class="footer-privacy" href="/privacy/">Privacy policies</a><a class="footer-contact" href="https://www.linkedin.com/in/mjmacdougall/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><span class="copyright footer-copyright">© {new Date().getFullYear()} Mike MacDougall</span></footer>
   </div>
 </SiteLayout>
 
 <script>
   const downloadCount = document.querySelector<HTMLElement>('[data-download-count]');
+  const downloadLabel = document.querySelector<HTMLElement>('[data-download-label]');
   const downloadsContainer = document.querySelector<HTMLElement>('[data-gem-downloads-api]');
   const downloadsApi = downloadsContainer?.dataset.gemDownloadsApi;
+  const fallbackDownloads = Number(downloadsContainer?.dataset.fallbackDownloads);
+  const cacheKey = 'mmac.app:howsigned:downloads';
+
+  const formatCount = (count: number) => new Intl.NumberFormat('en-US').format(count);
+  const isValidCount = (count: number) => Number.isSafeInteger(count) && count >= 0;
+
+  if (downloadCount && isValidCount(fallbackDownloads)) {
+    downloadCount.textContent = formatCount(fallbackDownloads);
+    try {
+      const storedCount = localStorage.getItem(cacheKey);
+      const cachedCount = storedCount === null ? Number.NaN : Number(storedCount);
+      if (isValidCount(cachedCount)) downloadCount.textContent = formatCount(cachedCount);
+    } catch {
+      // Keep the baked-in fallback when browser storage is unavailable.
+    }
+  }
 
   if (downloadCount && downloadsApi) {
     try {
@@ -71,9 +91,15 @@ import { apps, openSource, outsideTheAppStore, profile } from '@/data/site';
       const gem = await response.json() as { downloads?: number };
       if (typeof gem.downloads !== 'number') throw new Error('RubyGems returned no total');
 
-      downloadCount.textContent = new Intl.NumberFormat('en-US').format(gem.downloads);
+      downloadCount.textContent = formatCount(gem.downloads);
+      if (downloadLabel) downloadLabel.textContent = 'total downloads on RubyGems';
+      try {
+        localStorage.setItem(cacheKey, String(gem.downloads));
+      } catch {
+        // The live count still works when browser storage is unavailable.
+      }
     } catch {
-      downloadCount.textContent = 'Unavailable';
+      if (downloadLabel) downloadLabel.textContent = 'last known downloads on RubyGems';
     }
   }
 </script>
