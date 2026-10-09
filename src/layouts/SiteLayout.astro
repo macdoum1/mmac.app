@@ -2,6 +2,9 @@
 import { profile } from '@/data/site';
 import '@/styles/global.css';
 const { title = profile.name, description = profile.description } = Astro.props;
+const pageTitle = `${title} · ${profile.domain}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL('/images/social-preview.png', Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -10,7 +13,24 @@ const { title = profile.name, description = profile.description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0c1421" />
     <meta name="description" content={description} />
-    <title>{title} · {profile.domain}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={profile.domain} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The mmac.app wordmark in white on a Hamilton blue rounded rectangle against a dark background" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content="The mmac.app wordmark in white on a Hamilton blue rounded rectangle against a dark background" />
+    <title>{pageTitle}</title>
   </head>
   <body>
     <slot />
