@@ -112,6 +112,7 @@ The custom domain is configured in GitHub’s Pages settings, `public/CNAME`, an
 Privacy policies are static HTML copied from `public/privacy/` into the build. Keep these paths working:
 
 - `/privacy/`
+- `/privacy/afterlune/` and `/support/afterlune/`
 - `/privacy/plnk/`
 - `/privacy/recipe-hound/`
 - `/privacy/field-guide/` (Verdant Ledger)
