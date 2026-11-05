@@ -37,6 +37,7 @@ The preview serves `dist/`, so rebuild after editing source files. Astro may rep
 | Social sharing image (1200 × 630 PNG) and editable vector source | `public/images/social-preview.png` and `public/images/social-preview.svg` |
 | Browser tab favicon and Apple touch icon | `public/favicon.svg` and `public/apple-touch-icon.png` |
 | Privacy policy pages | `public/privacy/` |
+| App support pages | `public/support/` |
 | Content and link checks | [tests/site.test.mjs](tests/site.test.mjs) |
 | CI validation and deployment | `.github/workflows/` |
 
