@@ -36,7 +36,7 @@ The preview serves `dist/`, so rebuild after editing source files. Astro may rep
 | Photography and 3D print previews | `public/images/photography/` and `public/images/prints/` |
 | Social sharing image (1200 × 630 PNG) and editable vector source | `public/images/social-preview.png` and `public/images/social-preview.svg` |
 | Browser tab favicon and Apple touch icon | `public/favicon.svg` and `public/apple-touch-icon.png` |
-| Privacy policy pages | `public/privacy/` |
+| Privacy policy and app support pages | `public/privacy/` and `public/support/` |
 | Content and link checks | [tests/site.test.mjs](tests/site.test.mjs) |
 | CI validation and deployment | `.github/workflows/` |
 
@@ -117,5 +117,6 @@ Privacy policies are static HTML copied from `public/privacy/` into the build. K
 - `/privacy/recipe-hound/`
 - `/privacy/field-guide/` (Verdant Ledger)
 - `/privacy/taptapcount/`
+- `/privacy/twotop/` and `/support/twotop/`
 
 Older app releases can also reference legacy GitHub Pages policy URLs. Preserve their existing hosting or redirects when moving policies; updating a link here does not update URLs embedded in already released apps.
