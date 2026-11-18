@@ -44,7 +44,7 @@ The preview serves `dist/`, so rebuild after editing source files. Astro may rep
 
 Edit [src/data/site.ts](src/data/site.ts) to update the profile, project descriptions, App Store destinations, open source links, and interests. Project cards are rendered from this data by the reusable `ProjectCard` component.
 
-The app array determines display order. PLNK leads, followed by Recipe Hound, Verdant Ledger, and TapTapCount. Keep Verdant Ledger’s description clear that it is an unofficial Pokopia companion.
+The app array determines display order. PLNK leads, followed by Two-Top, Recipe Hound, Verdant Ledger, and TapTapCount. Keep Verdant Ledger’s description clear that it is an unofficial Pokopia companion.
 
 App icons and screenshots in `public/images/apps/` are actual published App Store assets. Use each app’s current App Store listing to find replacement assets, and confirm that they represent the intended release. Save assets locally and update their paths and alt text in `site.ts` when needed.
 

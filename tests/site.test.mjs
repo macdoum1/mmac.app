@@ -5,7 +5,7 @@ import { readFile, readdir } from 'node:fs/promises';
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 
 test('built page contains the verified portfolio projects', () => {
-  for (const name of ['PLNK', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount', 'howsigned']) {
+  for (const name of ['PLNK', 'Two-Top', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount', 'howsigned']) {
     assert.ok(html.includes(name), `missing project: ${name}`);
   }
   assert.match(html, /id="work-title">Built solo\./);
@@ -14,13 +14,14 @@ test('built page contains the verified portfolio projects', () => {
   assert.doesNotMatch(html, /APPS &amp; PROJECTS|A few things I’ve made/);
   assert.doesNotMatch(html, /PLNK · 30 DROPS/);
   const projectList = html.slice(html.indexOf('id="work"'));
-  const projectOrder = ['PLNK', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount'].map((name) => projectList.indexOf(name));
+  const projectOrder = ['PLNK', 'Two-Top', 'Recipe Hound', 'Verdant Ledger', 'TapTapCount'].map((name) => projectList.indexOf(name));
   assert.deepEqual(projectOrder, [...projectOrder].sort((a, b) => a - b), 'PLNK leads the project list');
 });
 
 test('built page links to the requested public destinations', () => {
   for (const href of [
     'https://apps.apple.com/us/app/plnk-pachinko-challenge/id1047962614',
+    'https://apps.apple.com/us/app/two-top-games-for-two/id6835223548',
     'https://apps.apple.com/us/app/recipe-hound/id6760431706',
     'https://apps.apple.com/us/app/verdant-ledger/id6759935576',
     'https://apps.apple.com/us/app/taptapcount/id981734553',
