@@ -21,6 +21,7 @@ test('built page contains the verified portfolio projects', () => {
 test('built page links to the requested public destinations', () => {
   for (const href of [
     'https://apps.apple.com/us/app/plnk-pachinko-challenge/id1047962614',
+    'https://apps.apple.com/us/app/two-top-games-for-two/id6835223548',
     'https://apps.apple.com/us/app/recipe-hound/id6760431706',
     'https://apps.apple.com/us/app/verdant-ledger/id6759935576',
     'https://apps.apple.com/us/app/taptapcount/id981734553',

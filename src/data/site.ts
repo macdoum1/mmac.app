@@ -35,7 +35,7 @@ export const apps = [
     icon: '/images/apps/two-top-icon.jpg',
     image: '/images/apps/two-top-screen.jpg',
     imageAlt: 'A Two-Top trivia face-off with each player’s half of the screen turned to face them',
-    href: 'TWO_TOP_APP_STORE_URL',
+    href: 'https://apps.apple.com/us/app/two-top-games-for-two/id6835223548',
     privacyHref: '/privacy/twotop/',
     featured: true,
   },
